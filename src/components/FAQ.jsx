@@ -26,12 +26,10 @@ const FAQ = ({ FAQ }) => {
                     <div id="faq" className="mx-auto max-w-7xl px-6">
                         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
                             <h2 className="text-4xl font-semibold tracking-tight text-balance text-primary sm:text-5xl">
-                                Întrebări frecvente
+                                Häufig gestellte Fragen
                             </h2>
                             <p className="mt-2 text-lg/8 text-dark">
-                                În această secțiune găsești răspunsuri clare și concise la cele mai comune întrebări.
-                                Scopul este să îți oferim informațiile de care ai nevoie rapid și ușor, pentru a-ți sprijini
-                                procesul de înțelegere și luare a deciziilor.
+                                Hier finden Sie kurze und klare Antworten auf die häufigsten Fragen.
                             </p>
 
                         </div>

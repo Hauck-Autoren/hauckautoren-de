@@ -7,10 +7,10 @@ const Articles = ({ articles, categorySlug }) => {
             <section className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
                     <h2 className="text-4xl font-semibold tracking-tight text-balance text-primary sm:text-5xl">
-                        Explorează Articole complete care inspiră creștere și stare ta de bine
+                        Entdecken Sie inspirierende Artikel
                     </h2>
                     <p className="mt-2 text-lg/8 text-dark">
-                        Aici găsești o selecție de articole atent alese, relevante pentru tine.
+                        Eine Auswahl relevanter Beiträge für Sie.
                     </p>
                 </div>
                 <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">

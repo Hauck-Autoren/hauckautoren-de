@@ -7,12 +7,10 @@ const Categories = ({ categories }) => {
             <section className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
                     <h2 className="text-4xl font-semibold tracking-tight text-balance text-primary sm:text-5xl">
-                        Explorează categoriile de subiecte care inspiră creșterea și bunăstarea
+                        Entdecken Sie Themenkategorien für Wachstum und Wohlbefinden
                     </h2>
                     <p className="mt-2 text-lg/8 text-dark">
-                        Această secțiune îți oferă o selecție de categorii atent create pentru a-ți aduce idei, informații
-                        și resurse utile. Indiferent dacă te interesează relațiile, sănătatea emoțională, dezvoltarea
-                        personală sau echilibrul mental, aici vei găsi conținut care să te sprijine în călătoria ta.
+                        Eine Auswahl sorgfältig erstellter Kategorien mit Ideen, Informationen und nützlichen Ressourcen für Ihre Entwicklung.
                     </p>
 
                 </div>

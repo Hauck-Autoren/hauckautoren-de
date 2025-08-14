@@ -47,7 +47,7 @@ export default function PageTemplate({ page, jsonLdType = "WebPage", canonical }
         };
     });
 
-    let crumbs = [{ name: 'Acasă', href: `${DOMAIN}/` }, ...dynamicCrumbs];
+    let crumbs = [{ name: '🏠', href: `${DOMAIN}/` }, ...dynamicCrumbs];
     if (page?.title && crumbs.length > 1) {
         crumbs[crumbs.length - 1] = { name: page.title, href: absUrl };
     }

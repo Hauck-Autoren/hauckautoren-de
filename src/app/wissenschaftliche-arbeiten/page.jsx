@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 
 export const revalidate = 60;
 
-const CATEGORY_PAGE = "ghostwriter"
+const CATEGORY_PAGE = "wissenschaftliche-arbeiten"
 
 // -------------------------
 // Metadata pentru CATEGORY_PAGE
@@ -68,10 +68,8 @@ export default async function CategoryPage() {
                 intro={category.description}
                 categorySlug=""
             />
-            {Array.isArray(category?.faq) && category.faq.length > 0 && (
-                <FAQ FAQ={category.faq} />
-            )}
 
+            <FAQ FAQ={category.faq} />
         </>
     );
 }
