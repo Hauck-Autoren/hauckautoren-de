@@ -15,6 +15,7 @@ export const NAVIGATION = {
         { name: "Wissenwertes", href: "/fachrichtungen" },
         { name: "Ghostwriter", href: "/ghostwriter" },
         { name: "Glossar", href: "/glossar" },
+        { name: "Fachrichtungen", href: "/fachrichtungen" },
         { name: "FAQ", href: "/faq" },
     ],
     footer: [

@@ -70,7 +70,8 @@ const CATEGORY_BY_SLUG_GROQ = `*[_type=="${SANITY_DOC_TYPE.category}" && slug.cu
   faq[]{question, answer}
 }`;
 
-const ARTICLES_BY_CATEGORY_SLUG_GROQ = `*[_type=="${SANITY_DOC_TYPE.article}" && $catSlug in categories[]->slug.current && _createdAt <= now()]{
+// NOTE: updated for single reference "category"
+const ARTICLES_BY_CATEGORY_SLUG_GROQ = `*[_type=="${SANITY_DOC_TYPE.article}" && category->slug.current == $catSlug && _createdAt <= now()]{
   _id,
   title,
   "slug": slug.current,
@@ -103,15 +104,18 @@ const ARTICLE_BY_SLUG_PUBLIC_GROQ = `*[_type=="${SANITY_DOC_TYPE.article}" && sl
   faq[]{question, answer}
 }`;
 
-const FIRST_ARTICLE_IMAGE_BY_CATEGORY_GROQ = `*[_type=="${SANITY_DOC_TYPE.article}" && $slug in categories[]->slug.current][0]{ mainImage }`;
+// NOTE: updated for single reference "category"
+const FIRST_ARTICLE_IMAGE_BY_CATEGORY_GROQ = `*[_type=="${SANITY_DOC_TYPE.article}" && category->slug.current == $slug][0]{ mainImage }`;
 
+// NOTE: updated for single reference "category"
+// keeping return keys "categories" and "articles" to avoid breaking callers
 const ALL_ARTICLE_PATHS_GROQ = `*[
   _type=="${SANITY_DOC_TYPE.article}" &&
-  defined(categories[0]->slug.current) &&
+  defined(category->slug.current) &&
   defined(slug.current) &&
   _createdAt <= now()
 ]{
-  "categories": categories[0]->slug.current,
+  "categories": category->slug.current,
   "articles": slug.current
 }`;
 
@@ -142,6 +146,7 @@ export async function getAllArticleSlugs(): Promise<string[]> {
   const rows: { slug: string }[] = await client.fetch(ALL_ARTICLE_SLUGS_GROQ);
   return rows.map(r => r.slug).filter(Boolean);
 }
+
 export async function getArticleBySlug(slug: string) {
   return client.fetch(ARTICLE_BY_SLUG_GROQ, { slug });
 }
